@@ -1,0 +1,27 @@
+Please use the following commands and steps to install ffmpeg:
+1. Login docker container
+	  docker exec -it CONTAINER_ID bash
+2. After login into docker container use following commands:
+
+	   cd /usr/local/bin
+	   mkdir ffmpeg
+	   cd ffmpeg
+	   install wget
+	   apt install wget
+	   wget https://johnvansickle.com/ffmpeg/builds/ffmpeg-git-amd64-static.tar.xz
+	   tar xvf ./ffmpeg-git-amd64-static.tar.xz 
+	   mv ffmpeg-git-20190717-amd64-static/ffmpeg .
+	   mv ffmpeg-git-20190717-amd64-static/ffprobe .
+	   ls
+	   ffmpeg
+	   ./ffmpeg
+	   rm -fr ./ffmpeg-git-amd64-static.tar.xz 
+	   ls
+	   rm -rf ffmpeg-git-20190717-amd64-static/
+	   ls
+	   ln -s /usr/local/bin/ffmpeg/ffmpeg /usr/bin/ffmpeg
+	   ln -s /usr/local/bin/ffmpeg/ffmpeg /usr/bin/ffprobe
+	   
+3. use following commands to check ffmpeg installed or not:
+ ffmpeg -version
+ ffprobe -version
